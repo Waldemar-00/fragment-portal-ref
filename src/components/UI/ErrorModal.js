@@ -1,10 +1,11 @@
-import Card from "./Card";
-import Button from "./Button";
-import styles from "./ErrorModal.module.css";
+import Card from "./Card" 
+import Button from "./Button"
+import Wrapper from '../helpers/Wrapper'
+import styles from "./ErrorModal.module.css" 
 
 const ErrorModal = (props) => {
   return (
-    <div>
+    <Wrapper>
       <div className={styles.backdrop} onClick={props.onCloseModal}></div>
 
       <Card className={styles.modal}>
@@ -18,8 +19,8 @@ const ErrorModal = (props) => {
           <Button onClick={props.onCloseModal}>Закрыть</Button>
         </footer>
       </Card>
-    </div>
-  );
-};
+    </Wrapper>
+  ) 
+} 
 
-export default ErrorModal;
+export default ErrorModal 
